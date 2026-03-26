@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase - Find Your Perfect Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <i class="fas fa-paper-plane"></i> TravelEase
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="btn-signin">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Find Your Perfect Journey</h1>
+    <p>Compare flights, hotels, and car rentals from hundreds of providers</p>
+
+    <!-- SEARCH WIDGET -->
+    <div class="search-widget">
+      <div class="search-tabs">
+        <button class="tab-btn active" data-tab="flights"><i class="fas fa-plane"></i> Flights</button>
+        <button class="tab-btn" data-tab="hotels"><i class="fas fa-hotel"></i> Hotels</button>
+        <button class="tab-btn" data-tab="cars"><i class="fas fa-car"></i> Cars</button>
+      </div>
+
+      <!-- Flights Form -->
+      <form class="search-form active" id="flightsSearchForm" data-tab="flights">
+        <div class="form-row">
+          <div class="form-group">
+            <label>From</label>
+            <input type="text" id="fromCity" placeholder="City or Airport" value="New York (JFK)">
+          </div>
+          <div class="form-group">
+            <label>To</label>
+            <input type="text" id="toCity" placeholder="City or Airport" value="Los Angeles (LAX)">
+          </div>
+          <div class="form-group">
+            <label>Departure</label>
+            <input type="date" id="departDate">
+          </div>
+          <div class="form-group">
+            <label>Return</label>
+            <input type="date" id="returnDate">
+          </div>
+          <div class="form-group">
+            <label>Passengers</label>
+            <select id="passengers">
+              <option>1 Passenger</option>
+              <option>2 Passengers</option>
+              <option>3 Passengers</option>
+              <option>4+ Passengers</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Class</label>
+            <select id="flightClass">
+              <option>Economy</option>
+              <option>Business</option>
+              <option>First Class</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search Flights</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Hotels Form -->
+      <form class="search-form" id="hotelsSearchForm" data-tab="hotels" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Destination</label>
+            <input type="text" id="hotelCity" placeholder="City or Hotel" value="Los Angeles">
+          </div>
+          <div class="form-group">
+            <label>Check-in</label>
+            <input type="date" id="checkinDate">
+          </div>
+          <div class="form-group">
+            <label>Check-out</label>
+            <input type="date" id="checkoutDate">
+          </div>
+          <div class="form-group">
+            <label>Guests</label>
+            <select id="guests">
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Rooms</label>
+            <select id="rooms">
+              <option>1 Room</option>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search Hotels</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Cars Form -->
+      <form class="search-form" id="carsSearchForm" data-tab="cars" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pickup Location</label>
+            <input type="text" id="pickupLocation" placeholder="Airport or City" value="Los Angeles (LAX)">
+          </div>
+          <div class="form-group">
+            <label>Pickup Date</label>
+            <input type="date" id="pickupDate">
+          </div>
+          <div class="form-group">
+            <label>Return Date</label>
+            <input type="date" id="carReturnDate">
+          </div>
+          <div class="form-group">
+            <label>Car Type</label>
+            <select id="carType">
+              <option>Any Type</option>
+              <option>Economy</option>
+              <option>Compact</option>
+              <option>Midsize</option>
+              <option>SUV</option>
+              <option>Luxury</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search Cars</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why TravelEase?</h2>
+      <p class="section-subtitle">We make travel planning simple, affordable, and enjoyable</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-tag"></i></div>
+          <h3>Best Prices Guaranteed</h3>
+          <p>We compare hundreds of providers to find you the lowest prices on flights, hotels, and car rentals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Easy &amp; Fast Booking</h3>
+          <p>Book your entire trip in minutes with our streamlined checkout process. No hidden fees, ever.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Customer Support</h3>
+          <p>Our dedicated support team is available around the clock to help with any questions or changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR DESTINATIONS -->
+  <section class="destinations-section">
+    <div class="container">
+      <h2 class="section-title">Popular Destinations</h2>
+      <p class="section-subtitle">Explore the world's most beloved travel destinations</p>
+      <div class="destinations-grid">
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80" alt="Paris">
+          <div class="destination-overlay">
+            <h3>Paris, France</h3>
+            <p>Flights from $599</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80" alt="New York">
+          <div class="destination-overlay">
+            <h3>New York, USA</h3>
+            <p>Flights from $199</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80" alt="Tokyo">
+          <div class="destination-overlay">
+            <h3>Tokyo, Japan</h3>
+            <p>Flights from $799</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=600&q=80" alt="Maldives">
+          <div class="destination-overlay">
+            <h3>Maldives</h3>
+            <p>Packages from $1,299</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80" alt="Sydney">
+          <div class="destination-overlay">
+            <h3>Sydney, Australia</h3>
+            <p>Flights from $899</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1543158181-1274e5362710?w=600&q=80" alt="Dubai">
+          <div class="destination-overlay">
+            <h3>Dubai, UAE</h3>
+            <p>Flights from $649</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section style="padding:60px 20px;background:white;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center;max-width:900px;margin:0 auto;">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:8px;">🏆</div>
+          <div style="font-weight:700;font-size:1rem;color:var(--color-dark);">Award Winning</div>
+          <div style="font-size:0.85rem;color:var(--color-text-secondary);">Best Travel Platform 2024</div>
+        </div>
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:8px;">🔒</div>
+          <div style="font-weight:700;font-size:1rem;color:var(--color-dark);">Secure Booking</div>
+          <div style="font-size:0.85rem;color:var(--color-text-secondary);">256-bit SSL encryption</div>
+        </div>
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:8px;">💰</div>
+          <div style="font-weight:700;font-size:1rem;color:var(--color-dark);">Price Match</div>
+          <div style="font-size:0.85rem;color:var(--color-text-secondary);">Find it cheaper? We'll match it</div>
+        </div>
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:8px;">⭐</div>
+          <div style="font-weight:700;font-size:1rem;color:var(--color-dark);">4.9/5 Rating</div>
+          <div style="font-size:0.85rem;color:var(--color-text-secondary);">Over 2M happy travelers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><i class="fas fa-paper-plane"></i> TravelEase</div>
+          <p class="footer-desc">Your trusted travel companion for flights, hotels, and car rentals worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Travel</h4>
+          <ul>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="cars.html">Car Rentals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TravelEase. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

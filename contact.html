@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - TravelEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <i class="fas fa-paper-plane"></i> TravelEase
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="#" class="btn-signin">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header" style="text-align:center;">
+    <div class="container">
+      <h1 style="font-size:3rem;font-weight:900;margin-bottom:16px;">Contact Us</h1>
+      <p style="font-size:1.2rem;color:rgba(255,255,255,0.7);max-width:560px;margin:0 auto;">
+        We'd love to hear from you. Send us a message and we'll respond within 24 hours.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Layout -->
+  <div class="contact-layout">
+    <!-- Contact Form -->
+    <div>
+      <div class="checkout-form-card">
+        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:24px;">Send a Message</h2>
+        <form id="contactForm">
+          <div class="form-grid" style="margin-bottom:20px;">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:20px;">
+            <label>Email Address *</label>
+            <input type="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group" style="margin-bottom:20px;">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group" style="margin-bottom:20px;">
+            <label>Subject *</label>
+            <select required>
+              <option value="">Select a subject</option>
+              <option>Booking Issue</option>
+              <option>Refund Request</option>
+              <option>Flight Change</option>
+              <option>Hotel Cancellation</option>
+              <option>Technical Support</option>
+              <option>Partnership Inquiry</option>
+              <option>Press Inquiry</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:20px;">
+            <label>Booking Reference (if applicable)</label>
+            <input type="text" placeholder="TE-2024-XXXXXX">
+          </div>
+          <div class="form-group" style="margin-bottom:28px;">
+            <label>Message *</label>
+            <textarea placeholder="How can we help you? Please provide as much detail as possible..." rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn-search" style="width:auto;padding:14px 40px;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <!-- Contact Cards -->
+      <div style="background:var(--color-light-gray);border-radius:20px;padding:32px;margin-bottom:24px;">
+        <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;color:var(--color-dark);">Get in Touch</h3>
+
+        <div style="display:flex;gap:16px;align-items:start;margin-bottom:20px;">
+          <div style="width:48px;height:48px;background:var(--gradient-accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;font-size:1.1rem;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <div style="font-weight:600;margin-bottom:4px;color:var(--color-dark);">Our Office</div>
+            <div style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.6;">123 Travel Street, Suite 500<br>San Francisco, CA 94105</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:start;margin-bottom:20px;">
+          <div style="width:48px;height:48px;background:var(--gradient-accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;font-size:1.1rem;">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div>
+            <div style="font-weight:600;margin-bottom:4px;color:var(--color-dark);">Phone</div>
+            <div style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.6;">+1 (888) 872-8352<br>Mon–Fri, 9am–6pm PST</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:start;margin-bottom:20px;">
+          <div style="width:48px;height:48px;background:var(--gradient-accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;font-size:1.1rem;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <div style="font-weight:600;margin-bottom:4px;color:var(--color-dark);">Email</div>
+            <div style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.6;">support@travelease.com<br>partnerships@travelease.com</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:start;">
+          <div style="width:48px;height:48px;background:var(--gradient-accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;font-size:1.1rem;">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div>
+            <div style="font-weight:600;margin-bottom:4px;color:var(--color-dark);">Support Hours</div>
+            <div style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.6;">24/7 online chat support<br>Phone: Mon–Fri 9am–6pm PST</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div class="map-placeholder">
+        <div style="text-align:center;">
+          <i class="fas fa-map-marked-alt" style="font-size:3.5rem;margin-bottom:16px;opacity:0.7;"></i>
+          <p style="font-size:1.2rem;font-weight:700;margin-bottom:4px;">San Francisco, CA</p>
+          <p style="opacity:0.65;font-size:0.9rem;">123 Travel Street, Suite 500</p>
+          <div style="margin-top:16px;display:inline-flex;gap:12px;">
+            <a href="#" style="background:rgba(255,255,255,0.15);color:white;padding:8px 18px;border-radius:8px;font-size:0.85rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fas fa-directions"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div style="background:var(--color-light-gray);border-radius:16px;padding:24px;margin-top:24px;">
+        <h4 style="font-weight:700;margin-bottom:16px;color:var(--color-dark);">Follow Us</h4>
+        <div style="display:flex;gap:12px;">
+          <a href="#" style="width:44px;height:44px;background:var(--gradient-accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;text-decoration:none;transition:var(--transition);" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" style="width:44px;height:44px;background:var(--gradient-accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;text-decoration:none;transition:var(--transition);" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" style="width:44px;height:44px;background:var(--gradient-accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;text-decoration:none;transition:var(--transition);" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" style="width:44px;height:44px;background:var(--gradient-accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;text-decoration:none;transition:var(--transition);" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section style="padding:80px 20px;background:var(--color-light-gray);">
+    <div class="container" style="max-width:800px;">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Quick answers to common questions</p>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <details style="background:white;border-radius:12px;padding:20px 24px;box-shadow:var(--shadow-card);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--color-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            How do I cancel or change my booking? <i class="fas fa-chevron-down" style="color:var(--color-accent-start);font-size:0.85rem;"></i>
+          </summary>
+          <p style="margin-top:12px;color:var(--color-text-secondary);line-height:1.7;font-size:0.95rem;">You can cancel or change your booking by logging into your account and going to "My Trips." Cancellation policies vary by provider. Most bookings allow free cancellation within 24 hours of purchase.</p>
+        </details>
+
+        <details style="background:white;border-radius:12px;padding:20px 24px;box-shadow:var(--shadow-card);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--color-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Is my payment information secure? <i class="fas fa-chevron-down" style="color:var(--color-accent-start);font-size:0.85rem;"></i>
+          </summary>
+          <p style="margin-top:12px;color:var(--color-text-secondary);line-height:1.7;font-size:0.95rem;">Absolutely. We use 256-bit SSL encryption and are PCI DSS compliant. We never store your full card number, and all transactions are processed through secure payment gateways.</p>
+        </details>
+
+        <details style="background:white;border-radius:12px;padding:20px 24px;box-shadow:var(--shadow-card);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--color-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            How do I request a refund? <i class="fas fa-chevron-down" style="color:var(--color-accent-start);font-size:0.85rem;"></i>
+          </summary>
+          <p style="margin-top:12px;color:var(--color-text-secondary);line-height:1.7;font-size:0.95rem;">To request a refund, go to "My Trips" in your account or contact our support team. Refunds are processed within 5–10 business days, depending on your payment method and the provider's policy.</p>
+        </details>
+
+        <details style="background:white;border-radius:12px;padding:20px 24px;box-shadow:var(--shadow-card);">
+          <summary style="font-weight:600;cursor:pointer;color:var(--color-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Do you offer travel insurance? <i class="fas fa-chevron-down" style="color:var(--color-accent-start);font-size:0.85rem;"></i>
+          </summary>
+          <p style="margin-top:12px;color:var(--color-text-secondary);line-height:1.7;font-size:0.95rem;">Yes! We partner with leading travel insurance providers to offer comprehensive coverage. You can add insurance during checkout or within 14 days of your booking.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><i class="fas fa-paper-plane"></i> TravelEase</div>
+          <p class="footer-desc">Your trusted travel companion for flights, hotels, and car rentals worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Travel</h4>
+          <ul>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="cars.html">Car Rentals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TravelEase. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
